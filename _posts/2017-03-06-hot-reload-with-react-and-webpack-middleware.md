@@ -18,17 +18,17 @@ tags: ["React", "Webpack"]
 
 <ul>
 <li><b>Express.</b></li>
-<p>I will not cover either the setup of Express in this blog. There are many online resources to get you started with it. Refer to the source code in Github if you are curious.</p>
+<p>I will not cover either the setup of Express in this blog. There are many online resources to get you started with it. Refer to the <a href="https://github.com/philcms1/react-webpack-middleware-hotreload">source code</a> in Github if you are curious.</p>
 <li><b>Webpack.</b></li>
-<p>ES6 to ES5 transpiling (compiling from source code to source code) is still required, especially in a corporate environment, where proper browser support is critical, even for older versions. Webpack will use Babel, the de-facto standard, which also supports React’s JSX syntax.</p>
+<p>ES6 to ES5 transpiling (compiling from source code to source code) is still required, especially in a corporate environment, where proper browser support is critical, even for older versions. <a href="https://webpack.github.io/">Webpack</a> will use Babel, the de-facto standard, which also supports React’s JSX syntax.</p>
 <li><b>npm.</b></li>
 <p>npm will be our package manager. In the past, I used Bower and Gulp for front-end dependencies management, but webpack is required for react-hot-loader (and it gives more flexibility with less tooling).</p>
 <li><b>webpack-dev-middleware.</b></li>
-<p>This wrapper for webpack handles compiling your code in memory to serve it over Express in our situation (as opposed to bundling it as files). In watch mode, it delays requests to compile changes, saving the need to wait before refreshing the page. And with hot-reload, you don’t even need to refresh…</p>
+<p><a href="https://github.com/webpack/webpack-dev-middleware">webpack-dev-middleware</a> is a wrapper for webpack handles compiling your code in memory to serve it over Express in our situation (as opposed to bundling it as files). In watch mode, it delays requests to compile changes, saving the need to wait before refreshing the page. And with hot-reload, you don’t even need to refresh…</p>
 <li><b>react-hot-loader.</b></li>
-<p>It works by using webpack's Hot Module Replacement (HMR) API, and configuring your application to support hot-reloading. Essentially, we instruct webpack to use React Hot Reload for JSX and JS files.</p>
+<p>It works by using webpack's Hot Module Replacement (HMR) API, and configuring your application to support hot-reloading. Essentially, we instruct webpack to use <a href="https://github.com/gaearon/react-hot-loader">React Hot Reload</a> for JSX and JS files.</p>
 <li><b>webpack-hot-middleware.</b></li>
-<p>This module concerns itself with using said HMR API to connect your browser to webpack-dev-middleware, and propagate updates. React Hot Loader is thus still required to enable hot-reloading in your application, and correctly process these updates.</p>
+<p>This <a href="https://github.com/glenjamin/webpack-hot-middleware">module</a> concerns itself with using said HMR API to connect your browser to webpack-dev-middleware, and propagate updates. React Hot Loader is thus still required to enable hot-reloading in your application, and correctly process these updates.</p>
 </ul>
 
 <h4>So let’s dive in, with setting up React with Webpack:</h4>
@@ -155,7 +155,7 @@ npm install -g webpack-dev-server
 npm install --save-dev express request webpack-dev-middleware body-parser
 </code></pre>
 
-<p>Add the following lines to your <em>server.js</em> (refer to the code in Github for the complete file):</p>
+<p>Add the following lines to your <em>server.js</em> (refer to the <a href="https://github.com/philcms1/react-webpack-middleware-hotreload">code</a> in Github for the complete file):</p>
 
 <pre><code>
 const webpackDevMiddleware = require('webpack-dev-middleware');
